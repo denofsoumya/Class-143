@@ -23,7 +23,7 @@ export default class HomeScreen extends Component {
   }
 
   getMovie = () => {
-    const url = "http://localhost:5000/get-movie";
+    const url = " https://dcb1-103-233-65-90.ngrok.io/get-movie";
     axios
       .get(url)
       .then(response => {
@@ -37,7 +37,7 @@ export default class HomeScreen extends Component {
   };
 
   likedMovie = () => {
-    const url = "http://localhost:5000/liked-movie";
+    const url = " https://dcb1-103-233-65-90.ngrok.io/liked-movie";
     axios
       .post(url)
       .then(response => {
@@ -49,7 +49,7 @@ export default class HomeScreen extends Component {
   };
 
   unlikedMovie = () => {
-    const url = "http://localhost:5000/unliked-movie";
+    const url = " https://dcb1-103-233-65-90.ngrok.io/unliked-movie";
     axios
       .post(url)
       .then(response => {
@@ -61,7 +61,7 @@ export default class HomeScreen extends Component {
   };
 
   notWatched = () => {
-    const url = "http://localhost:5000/did-not-watch";
+    const url = "https://dcb1-103-233-65-90.ngrok.io/did-not-watch";
     axios
       .post(url)
       .then(response => {
@@ -74,6 +74,7 @@ export default class HomeScreen extends Component {
 
   render() {
     const { movieDetails } = this.state;
+    console.log(movieDetails)
     if (movieDetails.poster_link) {
       const {
         poster_link,
